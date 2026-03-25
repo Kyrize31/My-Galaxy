@@ -28,7 +28,7 @@ export default function App() {
           clearInterval(fadeOut);
           audio.volume = 0;
           // Change track to a more cinematic/space one for the ending
-          audio.src = "assets/tothebone.mp3";
+          audio.src = "/public/tothebone.mp3";
           audio.play().catch(e => console.log('Autoplay prevented:', e));
           
           // Fade in
@@ -87,7 +87,7 @@ export default function App() {
       {/* Background Music */}
       <audio 
         ref={audioRef} 
-        src="assets/gonegonegone.mp3" 
+        src="/public/gonegonegone.mp3" 
         loop 
         autoPlay
       />
