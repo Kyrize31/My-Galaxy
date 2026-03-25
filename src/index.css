@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-script: "Dancing Script", cursive;
+  
+  --color-pastel-pink: #ffd1dc;
+  --color-pastel-peach: #ffdfd3;
+  --color-pastel-lavender: #e0b0ff;
+  --color-pastel-blue: #b5eaea;
+}
+
+body {
+  @apply font-sans text-gray-800;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fdfbfb;
+}
+
+@layer utilities {
+  .bg-pastel-gradient {
+    background: linear-gradient(135deg, #ffe6fa 0%, #e3fdf5 50%, #ffe6fa 100%);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+  }
+  .bg-liquid-gradient {
+    background: linear-gradient(
+      -45deg,
+      #ff9a9e,
+      #fecfef,
+      #a1c4fd,
+      #c2e9fb,
+      #ffecd2,
+      #fcb69f
+    );
+    background-size: 400% 400%;
+    animation: liquidMove 15s ease infinite;
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes liquidMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-20vh) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseHeart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.floating-item {
+  position: absolute;
+  animation: floatUp linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.falling-item {
+  position: absolute;
+  animation: fallDown linear infinite;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Custom scrollbar for the book */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 193, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 182, 193, 0.8);
+}
