@@ -1,20 +1,5 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Galaxy Website
 
-# Run and deploy your AI Studio app
+Welcome to the **My Galaxy Website**! 🌌
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/aa5aa36f-9911-4428-995a-ce4d28bdad62
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This is a unique web experience designed to showcase a stunning and interactive galaxy. Dive into an immersive journey with mesmerizing visuals and dynamic elements that respond to your interaction. Explore the unknown and feel the beauty of the galaxy unfold as you navigate through it.
