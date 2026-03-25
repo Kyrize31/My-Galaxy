@@ -760,7 +760,7 @@ export default function EndingScreen() {
               onClick={(e) => e.stopPropagation()}
             >
               <img 
-                src="public/naee.png" 
+                src="/naee.png" 
                 alt="Us Expanded" 
                 className="w-full h-auto max-h-[55vh] object-contain border border-gray-200"
               />
