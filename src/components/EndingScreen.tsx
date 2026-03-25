@@ -731,7 +731,7 @@ export default function EndingScreen() {
               onClick={() => setIsPolaroidExpanded(true)}
             >
               <img 
-                src="assets/naee.png" 
+                src="/naee.png" 
                 alt="Us" 
                 className="w-10 h-10 md:w-12 md:h-12 object-cover"
                 referrerPolicy="no-referrer"
